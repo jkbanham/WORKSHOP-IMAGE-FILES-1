@@ -24,7 +24,7 @@ read -rp "Enter an optional S3 prefix/folder, or press Enter for the entire buck
 JSON_DIR="./textract-json"
 CSV_FILE="./textract-results.csv"
 
-mkdir -p "$JSON_DIR"
+mkdir -p "$JSON_DIR"-o pipefail
 
 # Confirm required commands are installed.
 for COMMAND in aws jq; do
